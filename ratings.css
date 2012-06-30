@@ -1,0 +1,99 @@
+#cont{
+	max-width: 66%;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+
+
+#pic{
+	width: auto;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	float: right;
+	overflow:hidden;
+	zoom:1;
+	*-ms-inject: expression(this.x||(this.innerHTML+='<br\ style="clear:both;font:0/0">',this.x=1));
+}
+
+#star-cont{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	float: left;
+	min-width: 1.5em;
+	min-height: 2em;
+}
+
+.star-bg{
+	width: 2em;
+	height: 2em;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	overflow: hidden;
+}
+
+.star{
+	width: 1em !important;
+	height: 1em;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	z-index: 5;
+}
+
+.star-bg:before,
+.star:before{
+	content: "☆";
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+	float: left;
+	position: relative;
+	color: red;
+	top: -0.25em;
+}
+
+.star:before{
+	content: "★";
+
+}
+
+#star-cont .half{
+	width: 0.5em !important;
+	
+}
+
+#star-cont .empty{
+	visibility: hidden;
+}
+
+/* Target ALL FireFox  [!] */
+@-moz-document url-prefix(){
+	.star{
+		width: 1.7em !important;
+		height: 1.7em !important;
+		position: absolute;
+	}
+	.star-bg:before,
+	.star:before{
+		font-size: 1.7em !important;
+		left: .09em !important;
+		top: -0.25em !important;
+	}
+	#star-cont .half{
+		width: 0.6em !important;
+	}
+}
+
+
+
+
+
+  
